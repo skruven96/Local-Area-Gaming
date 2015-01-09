@@ -1,0 +1,16 @@
+
+.countdown {
+	font-size: 45px;
+	text-align: center;
+	width: 920px;
+	background-color: #ffffff;
+}
+
+.countdown .text {
+	font-weight: bold;
+}
+
+.nextLan {
+	text-align: center;
+	font-weight: bold;
+}

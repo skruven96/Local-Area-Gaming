@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="login-div one-third alpha shadow">
+		<h1>Logga in</h1>
+		<form  onSubmit="login($(this).find('.username').val(), $(this).find('.password').val());" action="javascript:void(0)">
+			<input class="item username" type="text" placeholder="Användarnamn"><br/>
+			<input class="item password" type="password" placeholder="Lösenord"><br/>
+			<input class="butt" type="submit" value="Logga in"><br/>
+			<div class="item error-msg" style="display: none;"></div>
+		</form>
+	</div>
+	
+	<div class="two-thirds omega shadow register-div">
+		<h1>Registrera dig</h1>
+		<form onSubmit="register($(this)); return false;" action="javascript:void(0)">
+            <span class="error-msg error-username"><br></span>
+			<input class="item username" type="text" placeholder="Användarnamn"><br/>
+
+            <span class="error-msg error-password">Skriv ett lösenord<br></span>
+			<input class="item password" type="password" placeholder="Lösenord"><br/>
+
+            <span class="error-msg error-repassword">Lösenorden matchar inte<br></span>
+			<input class="item repassword" type="password" placeholder="Lösenord"><br/>
+
+			<input class="item email" type="text" placeholder="Mailadress"><br/>
+			<input class="butt" type="submit" value="Registrera"><br/>
+		</form>
+		<div class="item spinner" style="display: none;"></div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Lan</title>
+
+    {% load staticfiles %}
+    <script src='{% static 'js/countdown.js' %}'></script>
+    <script src='{% static 'js/jquery.js' %}'></script>
+	<script src='{% static 'js/login.js' %}'></script>
+    <script src='{% static 'js/mypages.js' %}'></script>
+    <script src='{% static 'js/navbar.js' %}'></script>
+    <script src='{% static 'js/seats.js' %}'></script>
+	<script src='{% static 'js/tournaments.js' %}'></script>
+
+
+    <link rel='stylesheet' type='text/css' href='{% static 'css/countdown.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/home.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/index.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/login.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/mypages.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/navbar.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/seats.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/tickets.css' %}'>
+    <link rel='stylesheet' type='text/css' href='{% static 'css/tournaments.css' %}'>
+</head>
+
+<body>
+	<div class='navbar shadow'>
+		<div class='wrapper'>
+			<ul class='items'>
+				<li class='navitem-home item' style='background-color: #E64A19;' onClick='loadPage("home");'>Hem</li>
+				<li class='navitem-seats item' onClick='loadPage("seats");'>Platser</li>
+				<li class='navitem-tournaments item' onClick='loadPage("tournaments");'>Turneringar</li>
+            	{% if authenticated %}
+					<li class='navitem-mypages item' onClick='loadPage("mypages");'>Mina Sidor</li>
+					<li class='navitem-page item' onClick='loadPlayerPage($(this));'>A name</li>
+            	{% endif %}
+			</ul>
+
+        	{% if authenticated %}
+				<span class='logout' onClick='logout();'>logga ut</span>
+        	{% else %}
+        		<span class='login' onClick='loadPage("login");'>logga in / register</span>
+        	{% endif %}
+		</div>
+	</div>
+
+	<div class='content' style='width: 920px; margin: 0px auto; '>
+		{% include page|add:'.html' %}
+    </div>
+
+	<div style='width: 920px; margin: 0px auto; '>
+		{% include 'countdown.html' %}
+	</div>
+</body>
+</html>

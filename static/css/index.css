@@ -1,0 +1,65 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	font-family: calibri;
+	background-color: #fafafa;
+    overflow: hidden;
+}
+
+.shadow{
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.23);
+	background-color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.one-third {
+	padding: 0px 16px;
+	width: 278px;
+}
+
+.two-thirds {
+	width: 600px;
+}
+
+.alpha {
+	float: left;
+	margin-left: 0px;
+}
+
+.omega {
+	float: right;
+	margin-right: 0px;
+}
+
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.spinner {
+	width: 125px; height: 125px;
+    
+	-webkit-animation: sweep 1s infinite linear;
+    -moz-animation: sweep 1s infinite linear;
+    animation: sweep 1s infinite linear;
+    
+	border-radius: 62px;
+	border-bottom: 5px solid #9C27B0;
+}
+
+@-webkit-keyframes sweep { to { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes sweep { to { -webkit-transform: rotate(360deg); } }
+@keyframes sweep { to { -webkit-transform: rotate(360deg); } }
+
+.button {
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,44 @@
+
+.seats {
+	width: 888px;
+	padding: 16px;
+}
+
+.tip {
+	background-color: #4CAF50;
+	width: 40px;
+	height: 40px;
+	border: 1px solid white;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.seat {
+	background-color: #4CAF50;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+}
+
+.seat:hover {
+	background-color: #388E3C;
+}
+
+.path {
+	width: 40px;
+	height: 40px;
+}
+
+.scene {
+	background-color: #01579B;
+	height: 84px;
+	width: 252px;
+	margin: 0px auto 30px auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 84px;
+	font-size: 40px;
+}

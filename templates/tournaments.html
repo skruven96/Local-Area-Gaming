@@ -1,0 +1,45 @@
+{% load cycle from future %}
+
+<div class='shadow game-selectors'>
+	<div class='selector'></div>
+
+    {% for game in games %}
+        {% cycle '0px' '25%' '50%' '75%' as left silent %}
+		<span class='game' style='width: 25%; left: {{ left }}; height: 64px;' onClick="game('{{ game.js_id }}', '{{ left }}');">
+			{{ game.name }}
+		</span>
+    {% endfor %}
+</div>
+
+<div style='width: 64px'></div>
+
+<div class='game-spacer'></div>
+
+{% for game in games %}
+    {% cycle '0px' '25%' '50%' '75%' as left silent %}
+	<div class='shadow game-div game-{{ game.js_id }}' style='' onClick='game("{{ game.js_id }}", "{{ left }}");'>
+		<div class='brackets'>
+
+        </div>
+
+    	<div class='teams'>
+			{% for team in game.teams.all %}
+                <div class='team'>
+					<div class='name'>{{ team.name }}</div>
+
+					<a class="more" onClick="show(this);">visa...</a>
+					<a class="less" style="display: none;" onClick="less(this);">dölj...</a>
+
+					<span class="score">{{ team.lost }}</span><span class="score-label lost">Förlorade: </span>
+					<span class="score">{{ team.won }}</span><span class="score-label won">Vunna: </span>
+
+                	<div class='members'>
+                        {% for member in team.members.all %}
+                            <div class='member'>{{ member.username }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+			{% endfor %}
+        </div>
+	</div>
+{% endfor %}

@@ -1,0 +1,74 @@
+
+.mypages {
+	padding-right: 20px;
+}
+
+.mypages .name {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 10px 20px;
+}
+
+.mypages .teams {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.mypages .how-to-pay {
+	position: relative;
+	left: 20px;
+	top: 10px;
+
+	width: 100%;
+	height: 0px;
+	transition: height 0.5s linear;
+
+	overflow: hidden;
+}
+
+.mypages .how-to-pay .swish {
+	position: absolute;
+	right: 20px;
+
+	width: 329px;
+	height: 548px;
+}
+
+.mypages .how-to-pay .swish .number {
+	position: absolute;
+	top: 164px;
+	left: 30px;
+	font-size: 26px;
+}
+
+.mypages .how-to-pay .swish .sum {
+	position: absolute;
+	top: 244px;
+	left: 30px;
+	font-size: 26px;
+}
+
+.mypages .how-to-pay .swish .message {
+	position: absolute;
+	top: 324px;
+	left: 30px;
+	font-size: 26px;
+}
+
+.mypages .how-to-pay .credit-card {
+	position: absolute;
+	left: 0px;
+	height: 548px;
+}
+
+.mypages .how-to-pay .credit-card .number {
+
+}
+
+.mypages .how-to-pay .credit-card .sum {
+
+}
+
+.mypages .how-to-pay .credit-card .message {
+
+}

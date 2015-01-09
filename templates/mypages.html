@@ -1,0 +1,64 @@
+<div class='shadow mypages' style='padding-top: 5px; padding-bottom: 39px;'>
+	<span class='name'>{{ username }}</span>
+
+    <span class='button' style='float: right;'>Ändra lösenord</span>
+
+	<div class='tickets'>
+        {% for ticket in tickets %}
+            <div class='ticket'>
+                <div class='number'>nummer: {{ ticket.unique_str_id }}</div>
+                {% if ticket.payed %}
+                    {% if ticket.position == None %}
+                        <div class='seat-id'>seat: <span class='button' onclick='loadPage("seats")'>välj plats</span></div>
+                    {% else %}
+                        <div class='seat-id'>seat: {{ ticket.position.str_id }}</div>
+                    {% endif %}
+                    <span class='button' style='padding: 2px 10px;' onclick='giveAway("{{ ticket.unique_str_id }}");'>Ge iväg</span>
+                {% else %}
+                    <span class='button status' style='float: right;' onclick='pay("{{ ticket.unique_str_id }}");'>Betala</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+	
+	<div class='teams'>
+        {% for team in teams %}
+            <div class='team'>
+                <div class='name'></div>
+                <div class='game'></div>
+
+
+            </div>
+        {% endfor %}
+    </div>
+
+    <span class='button' style='float: right;' onclick='loadPage("seats");'>Välj/Ändra platser</span>
+    <span class='button' style='float: right;' onclick='orderTicket();'>Beställ biljett</span>
+
+    <div class='how-to-pay' style='margin-top: 39px;'>
+        <div class='credit-card'>
+            Ifall du vill betala med swish så ser det ut som till höger.<br><br>
+
+            Annars så kan du betala med kort då du skickar du <span class='sum'></span>kr till detta konto:<br>
+            ?konto?<br><br>
+
+            med meddelandet "<span class='message'></span>".<br><br>
+
+            Så fort vi ser att eran betalning som kan ta några dagar så godkänner<br>
+            vi den och ni kan välja en plats.<br><br>
+
+            Annars så får du ringa detta 0709428038 och försöka fixa en kontant betalning.
+        </div>
+
+        <div class='swish'>
+            {% load staticfiles %}
+            <img src='{% static 'imgs/swish_payment.png' %}' style='width: 100%; height: 100%;' />
+
+            <span class='number'>0709428038</span>
+            <span class='sum'></span>
+            <span class='message'></span>
+        </div>
+
+        <span class='button' style='position: absolute; top: 510px;' onclick='$(".how-to-pay").css("height", "0px");'>Göm</span>
+    </div>
+</div>

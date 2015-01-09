@@ -1,0 +1,85 @@
+
+.game-selectors {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #9E9E9E;
+}
+
+.game-selectors .selector {
+	width: 25%;
+	height: 64px;
+	position: absolute;
+	background-color: #616161;
+	
+	transition: left 0.3s;
+}
+
+.game-selectors .game {
+	position: absolute;
+	height: 64px;
+	line-height: 64px;
+	padding: 0px;
+	text-align: center;
+}
+
+.game-spacer { height: calc(100% - 68px - 64px - 140px); }
+
+.game-div {
+    height: calc(100% - 68px - 64px - 155px);
+    width: 920px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    
+    position: absolute;
+    top: 142px;
+    
+    transition: left 0.3s;
+}
+
+.teams {
+	
+}
+
+.teams .team {
+	width: 90%;
+    height: 60px;
+	margin: 0px auto;
+	clear: both;
+	line-height: 60px;
+	vertical-align: middle;
+	border-top: 2px solid black;
+	overflow: hidden;
+	
+	transition: height 0.3s;
+}
+
+.teams .team .name {
+	display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.teams .team .score-label {
+	float: right;
+	margin-right: 10px;
+}
+
+.teams .team .won { color: #388E3C; }
+.teams .team .lost{ color: #D32F2F; }
+
+.teams .team .score {
+	float: right;
+	margin-right: 20px;
+}
+
+.teams .team .more, .teams .team .less {
+	float: right;
+	color: blue;
+	text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+
+.register-div, .login-div{
+	text-align: center;
+	height: 300px;
+}
+
+.register-div form .item, .login-div form .item  {
+	margin: 2px auto;
+	clear: both;
+}
+
+.login-div .error-msg, .register-div .error-msg {
+	font-weight: bold;
+	display: none;
+}
+
+.butt{
+	margin: 2px auto;
+}
+
+input[class*="item"]:hover{
+	cursor: text;
+}

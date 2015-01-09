@@ -1,0 +1,44 @@
+
+.tickets {
+	font-weight: bold;
+	margin: 10px 20px;
+}
+
+.tickets .ticket {
+    height: 30px;
+    line-height: 26px;
+    vertical-align: middle;
+}
+
+.tickets .ticket .number {
+	padding: 2px 0px;
+
+	font-size: 26px;
+    font-weight: bold;
+
+	float: left;
+}
+
+.tickets .ticket .status {
+	padding: 2px 10px;
+
+	font-size: 26px;
+	float: right;
+}
+
+.tickets .ticket .seat-id {
+	padding: 2px 10px;
+
+	font-size: 26px;
+	margin-right: 20px;
+
+	float: right;
+}
+
+.tickets .button {
+    padding: 0px 10px;
+	height: 30px;
+
+	font-size: 26px;
+	float: right;
+}
